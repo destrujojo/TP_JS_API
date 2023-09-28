@@ -8,6 +8,21 @@ for (let i = 0; i < data.length; i++) {
   let newArticle = document.createElement("article");
   let main = document.querySelector("main");
 
+  switch (data[i].apiTypes[0].name) {
+    case "Plante":
+      newArticle.style.backgroundColor = "green";
+      newArticle.style.borderColor = "green";
+      break;
+    case "Feu":
+      newArticle.style.backgroundColor = "orange";
+      newArticle.style.borderColor = "orange";
+      break;
+    case "Eau":
+      newArticle.style.backgroundColor = "blue";
+      newArticle.style.borderColor = "blue";
+      break;
+  }
+
   newArticle.innerHTML = `<figure>
           <picture>
             <img
